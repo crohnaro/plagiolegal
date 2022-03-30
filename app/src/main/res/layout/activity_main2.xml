@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:foreground="@drawable/gradient2">
+    </View>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="wh"
+        >
+
+
+        <ImageView
+            android:id="@+id/menutoolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu">
+        </ImageView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            app:cardCornerRadius="100dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="10dp"
+            >
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </androidx.appcompat.widget.SearchView>
+
+            <TextView
+                android:id="@+id/textosearchbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buscar no Mercado Livre"
+                android:textColor="@color/division"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="40dp"
+                >
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imgtoolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cart"
+            android:layout_marginStart="20dp">
+
+        </ImageView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imagelocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/location"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/endereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar para Vinicios Cararine Coelho - Rua Ari..."
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toEndOf="@id/imagelocation"
+        android:layout_marginStart="20dp"
+        >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/rightendereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/right"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="35dp">
+    </ImageView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/anuncioprincipal"
+        android:layout_width="380dp"
+        android:layout_height="170dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/endereco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/bannerprincipal_foreground">
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+        android:id="@+id/propaganda1"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="5dp" app:cardElevation="10dp"
+            app:layout_constraintTop_toBottomOf="@id/anuncioprincipal"
+            app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/slide2_foreground">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/propaganda2"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="20dp"
+        app:layout_constraintTop_toBottomOf="@id/propaganda1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/slide3_foreground">
+
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/opcao1"
+        app:layout_constraintTop_toBottomOf="@id/propaganda2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="160dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/opcao1_foreground"
+            android:padding="10dp"
+            >
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/opcao2"
+        app:layout_constraintStart_toEndOf="@id/opcao1"
+        app:layout_constraintTop_toBottomOf="@id/propaganda2"
+        app:cardCornerRadius="160dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/opcao2_foreground"
+            android:padding="12dp"
+            >
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/opcao3"
+        app:layout_constraintStart_toEndOf="@id/opcao2"
+        app:layout_constraintTop_toBottomOf="@id/propaganda2"
+        app:cardCornerRadius="160dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/opcao3_foreground"
+            android:padding="12dp"
+            >
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/opcao4"
+        app:layout_constraintStart_toEndOf="@id/opcao3"
+        app:layout_constraintTop_toBottomOf="@id/propaganda2"
+        app:cardCornerRadius="160dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/opcao4_foreground"
+            android:padding="12dp"
+            >
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/opcao5"
+        app:layout_constraintStart_toEndOf="@id/opcao4"
+        app:layout_constraintTop_toBottomOf="@id/propaganda2"
+        app:cardCornerRadius="160dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/opcao5_foreground"
+            android:padding="10dp"
+            >
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textop1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Recarregar celular"
+        app:layout_constraintTop_toBottomOf="@id/opcao1"
+        app:layout_constraintStart_toStartOf="@id/opcao1"
+        app:layout_constraintEnd_toEndOf="@id/opcao1"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textoop"
+        android:textSize="11sp"
+        android:textAlignment="center">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textop2"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Ofertas do dia"
+        app:layout_constraintTop_toBottomOf="@id/opcao2"
+        app:layout_constraintStart_toStartOf="@id/opcao2"
+        app:layout_constraintEnd_toEndOf="@id/opcao2"
+        android:layout_marginTop="5dp"
+        android:textSize="11sp"
+        android:textColor="@color/opcao"
+        android:textAlignment="center">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textop3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Mercado"
+        app:layout_constraintTop_toBottomOf="@id/opcao3"
+        app:layout_constraintStart_toStartOf="@id/opcao3"
+        app:layout_constraintEnd_toEndOf="@id/opcao3"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textoop"
+        android:textSize="11sp"
+        android:textAlignment="center">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textop4"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Veículo"
+        app:layout_constraintTop_toBottomOf="@id/opcao4"
+        app:layout_constraintStart_toStartOf="@id/opcao4"
+        app:layout_constraintEnd_toEndOf="@id/opcao4"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textoop"
+        android:textSize="11sp"
+        android:textAlignment="center">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textop5"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Ver mais"
+        app:layout_constraintTop_toBottomOf="@id/opcao5"
+        app:layout_constraintStart_toStartOf="@id/opcao5"
+        app:layout_constraintEnd_toEndOf="@id/opcao5"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textoop"
+        android:textSize="11sp"
+        android:textAlignment="center">
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/propagandafinal"
+        app:layout_constraintTop_toBottomOf="@id/textop1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="15dp"
+        app:cardElevation="20dp"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/propagandafinal_foreground"
+            android:scaleType="centerCrop">
+
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/produtofinal"
+        app:layout_constraintTop_toBottomOf="@id/propagandafinal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp"
+        android:layout_width="380dp"
+        app:cardElevation="15dp"
+        android:layout_height="160dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visto Recentemente"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/hardcase1_foreground"
+            android:layout_marginTop="70dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Hard Case Teclado Stage Piano Casio Px-160"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="150dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 874"
+            android:textSize="18sp"
+            android:layout_marginTop="110dp"
+            android:layout_marginStart="150dp"
+            android:textStyle="bold">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10x R$87³² sem juros"
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="150dp"
+            android:textColor="@color/preçofinal"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frete grátis"
+            android:layout_marginTop="142dp"
+            android:layout_marginStart="151dp"
+            android:textColor="@color/preçofinal"
+            android:textStyle="bold"
+            >
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

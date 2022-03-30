@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/gradientBG"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:foreground="@drawable/gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_logotoolbar"
+        />
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_Toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        />
+    <ImageView
+        android:id="@+id/notification_Toolbar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_notoolbar"
+        app:layout_constraintTop_toTopOf="@+id/search_Toolbar"
+        app:layout_constraintEnd_toStartOf="@id/search_Toolbar"
+        app:layout_constraintBottom_toBottomOf="@id/search_Toolbar"
+        />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Olá, "
+        app:layout_constraintTop_toBottomOf="@id/logoToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:textSize="25sp"
+        />
+
+    <TextView
+        android:id="@+id/usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vinicios "
+        app:layout_constraintStart_toEndOf="@id/message"
+        app:layout_constraintTop_toTopOf="@id/message"
+        android:layout_marginStart="15dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/accView"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:layout_constraintTop_toBottomOf="@id/search_Toolbar"
+        app:layout_constraintEnd_toEndOf="@id/search_Toolbar"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/menu1"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="40dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/message"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp">
+
+
+            <TextView
+                android:paddingTop="25dp"
+                android:paddingStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seus Pedidos"
+                android:textAlignment="center"
+                android:textSize="19sp"
+                >
+            </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/menu2"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="40dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/message"
+        app:layout_constraintStart_toEndOf="@id/menu1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+
+        <TextView
+            android:paddingTop="15dp"
+            android:paddingStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comprar Novamente"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            >
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/menu3"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="40dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/menu1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+
+        <TextView
+            android:paddingTop="25dp"
+            android:paddingStart="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sua Conta"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            >
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/menu4"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="40dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/menu2"
+        app:layout_constraintStart_toEndOf="@id/menu3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+
+        <TextView
+            android:paddingTop="15dp"
+            android:paddingStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sua Lista de Desejos"
+            android:textAlignment="center"
+            android:textSize="19sp"
+            >
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/menu3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Seus Pedidos"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/vertudo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/menu4"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:text="Ver tudo"
+        android:textColor="@color/text"
+        >
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pedidosrow1"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/pedidos"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/livro"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            >
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pedidosrow2"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/pedidos"
+        app:layout_constraintStart_toEndOf="@id/pedidosrow1"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Não consegue encontrar o seu pedido?"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center">
+        </TextView>
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="10dp">
+        </SearchView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar pedidos"
+            android:layout_marginTop="95dp"
+            android:layout_marginStart="60dp"
+            >
+
+        </TextView>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/division"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/division"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/pedidosrow1"
+        app:layout_constraintStart_toStartOf="parent">
+    </View>
+
+    <TextView
+        android:id="@+id/continuecomprando"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue comprando"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/pedidosrow1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        app:layout_constraintTop_toBottomOf="@id/division"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/text">
+
+    </TextView>
+
+
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home"
+            android:layout_marginStart="50dp">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user"
+            android:layout_marginStart="70dp">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cart"
+            android:layout_gravity="center"
+            android:layout_marginStart="80dp">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu"
+            android:layout_gravity="right"
+            android:layout_marginEnd="40dp">
+        </ImageView>
+
+    </Toolbar>
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
